@@ -17,7 +17,7 @@ function pageLoad() {
   // the value of the variable 'output' is already set to display on the page
   // write an if.. else if.. else statement to evaluate the value of 'total'
   // and set the value of 'output' appropriately
-  if (total == 7 || total == 11) {
+  if (total == 7 || total == 11) { // '||' is 'or'
     output = 'you win!'
   } else if (total == 2 || total == 3 || total == 12) {
     output = 'you lose!'

@@ -1,11 +1,12 @@
-let numberOfProducts        // expects a Number 
-let products                // expects an Array of product data
-let promotion1Description   // expects a String describing the promotion
-let promotion2Description   // expects a String describing the promotion
-let promotion3Description   // expects a String describing the promotion
+let numberOfProducts = database.products.length       // expects a Number 
+let products = database.products               // expects an Array of product data
+let promotion1Description // expects a String describing the promotion
+let promotion2Description // expects a String describing the promotion
+let promotion3Description// expects a String describing the promotion
 let promotion1Icon          // expects a String (emoji)
 let promotion2Icon          // expects a String (emoji)
 let promotion3Icon          // expects a String (emoji)
+
 
 // The `database` variable is an existing object that contains our products database.
 // The variables at the top of this code will be used to create the UI for the page.
@@ -29,6 +30,46 @@ function pageLoad() {
 
   // 🔥🔥🔥 YOUR CODE GOES HERE 🔥🔥🔥
   console.log(database)
+  numberOfProducts = database.products.length
+  products = database.products
+
+  // Creating new promo# objects
+  let promo1 = database.promotions[Math.floor(Math.random() * database.promotions.length)]
+  promotion1Description = promo1.description
+
+  let promo2 = database.promotions[Math.floor(Math.random() * database.promotions.length)]
+  promotion2Description = promo2.description
+
+  let promo3 = database.promotions[Math.floor(Math.random() * database.promotions.length)]
+  promotion3Description = promo3.description
+
+  // promo1 conditional
+  if (promo1.type == 'shipping') {
+    promotion1Icon = '🚛'
+  } else if (promo1.type == 'discount') {
+    promotion1Icon = '🤑'
+  } else if (promo1.type == 'contest') {
+    promotion1Icon = '🎰'
+  }
+
+  // promo2 conditional
+  if (promo2.type == 'shipping') {
+    promotion2Icon = '🚛'
+  } else if (promo2.type == 'discount') {
+    promotion2Icon = '🤑'
+  } else if (promo2.type == 'contest') {
+    promotion2Icon = '🎰'
+  }
+
+    // promo3 conditional
+  if (promo3.type == 'shipping') {
+    promotion3Icon = '🚛'
+  } else if (promo3.type == 'discount') {
+    promotion3Icon = '🤑'
+  } else if (promo3.type == 'contest') {
+    promotion3Icon = '🎰'
+  }
+
 
   //  👆 YOUR CODE ENDS HERE. DON'T CHANGE ANY OTHER CODE 👆
 }

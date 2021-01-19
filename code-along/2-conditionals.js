@@ -6,8 +6,14 @@ function pageLoad() {
 
     // 🔥🔥🔥 YOUR CODE GOES HERE 🔥🔥🔥
     // The variable 'dinner' is already set to the value in the text input
+    console.log(dinner)
+    
     let output
-    output = '🌮'
+    if (dinner=='tacos') { // double == comparison
+      output = '🌮'
+    } else {
+      output = '🐱‍🏍' // single = assigning
+    }
 
     //  👆 YOUR CODE ENDS HERE. DON'T CHANGE ANY OTHER CODE 👆
     /*

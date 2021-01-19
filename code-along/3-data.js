@@ -13,9 +13,21 @@ function pageLoad() {
   // }
   //  👆 YOUR CODE ENDS HERE. DON'T CHANGE ANY OTHER CODE 👆
   
+  let profile ={ // declaring our own custom object use curly braces
+    name: 'James',
+    location: 'NYC',
+    status: 'Student'
+  }
+  console.log(profile.name)
+  console.log(profile.location)
+
+  let burger = ['buns','ground beef','american cheese'] // declare an array with []
+  burger.push('ketchup')
+  console.log(burger)
+  
   // template literals support HTML too!
   output = `
-    <div class="text-4xl">Sweet</div>
+    <div class="text-4xl">${profile.status}</div>
   `
   /*
     this code does the work of writing the output to screen...
